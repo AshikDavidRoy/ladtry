@@ -1,0 +1,81 @@
+package Lab21;
+
+import java.util.Scanner;
+
+class Employee
+{
+   String name,Add;
+   int age,Pno,sal;
+  void printSalary() 
+  {
+	  System.out.println("Salary Of the Employee is : " +sal);
+  }
+  void display() 
+  	{
+	  System.out.println("The Name is : " +name);
+	  System.out.println("The age is : " +age);
+	  System.out.println("The Phone number is : " +Pno);
+	  System.out.println("The Address is : " +Add);
+  	}
+}
+class Officer extends Employee
+	{
+	String specialization;
+	}
+class Manager extends Employee
+	{
+		String department;
+	}
+public class InheritanceTEST
+{
+  public static void main(String args[])
+  {
+	  Scanner sc = new Scanner(System.in);
+	  
+	  Officer off = new Officer();
+	  
+	  Manager man = new Manager();
+	  
+	  System.out.println("Enter the Name Of the Officer is : ");
+	  off.name = sc.next();
+	  
+	  System.out.println("Enter the age Of the Officer is : ");
+	  off.age = sc.nextInt();
+	  
+	  System.out.println("Enter the Phone number Of the Officer is : ");
+	  off.Pno = sc.nextInt();
+	  
+	  System.out.println("Enter the Address Of the Officer is : ");
+	  off.Add = sc.next();
+	  
+	  System.out.println("Enter the Salary  Of the Officer is : ");
+	  off.sal = sc.nextInt();
+	  
+	  System.out.println("Enter the specialization Of the Officer is : ");
+	  off.specialization = sc.next();
+	  
+	  System.out.println("Enter the Name Of the Manager is : ");
+	  man.name = sc.next();
+	  System.out.println("Enter the age Of the Manager is : ");
+	  man.age = sc.nextInt();
+	  System.out.println("Enter the Phone number Of the Manager is : ");
+	  man.Pno = sc.nextInt();
+	  System.out.println("Enter the Address Of the Manager is : ");
+	  man.Add = sc.next();
+	  System.out.println("Enter the Salary  Of the Manager is : ");
+	  man.sal = sc.nextInt();
+	  System.out.println("Enter the Department Of the Manager is : ");
+	  man.department = sc.next();
+	  
+	  System.out.println(" ");
+	  System.out.println("The Details Of the Manager is : ");
+	  off.display();
+	  off.printSalary();
+	  
+	  System.out.println(" ");
+	  System.out.println("The Details Of the Officer is : ");
+	  man.display();
+	  man.printSalary();
+	  
+  }
+}
