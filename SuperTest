@@ -1,0 +1,59 @@
+package Mod2;
+class Person
+	{
+		String name,gen;
+		int age;
+		Person(String n,String g,int a)
+			{
+				name = n;
+				gen = g;
+				age = a;
+			}
+		void show() 
+		{
+			System.out.println("NAME : " + name);
+			System.out.println("Gender: " +gen);
+			System.out.println("Age : " +age);
+		}
+	}
+class Employee extends Person
+	{
+		String com;
+		Employee(String n,String g,int a,String c)
+			{	
+				super(n,g,a);
+				com = c;
+			}
+		void cshow() 
+		{
+			System.out.println("company : " + com);
+		}
+	}
+
+class Program extends Employee
+	{
+		int sal;
+		Program(String n,String g,int a,String c,int s)
+		{
+			super(n,g,a,c);
+			sal = s;
+			
+		}
+		void sshow() 
+		{
+			System.out.println("Salary : " + sal);
+		}
+	
+	}
+public class SuperTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Program pp = new Program("xyz","Female",25,"CTC",25000);
+		
+		pp.show();
+		pp.cshow();
+		pp.sshow();
+	}
+
+}
