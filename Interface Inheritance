@@ -1,0 +1,81 @@
+package Lab21;
+interface Pet 
+{
+	
+	public void getName();
+	
+	public void setName();
+	
+	public void play();
+	
+}
+
+class Animal
+	{
+	int legs;
+	String name;
+	
+	Animal(int legs)
+	{
+		this.legs = legs;
+	}
+	void walk() {System.out.println("This animal walks on legs of " +legs);}
+	void eat() {}
+	}
+
+class Spider extends Animal{
+ void spider(int legs) {
+	 super.legs= legs;
+ }
+ void eat(){
+	 System.out.println("This animal eats insects");
+ }
+ public void play() 
+ {
+	 System.out.println("This animal plays with webs");
+ }
+
+}
+
+class Cat extends Animal //implements Pet
+{
+	void cat (int legs) {
+		 super.legs= legs;
+	 }
+	 public void play() 
+	 {
+		 System.out.println("This animal plays with Balls");
+	 }	
+	 void eat(){
+		 System.out.println("This animal eats fish");
+	 }
+}
+
+class Fish extends Animal //implements Pet
+{
+	void fish (int legs) {
+		 super.legs= legs;
+	 }
+	 public void play() 
+	 {
+		 System.out.println("This animal plays in water");
+	 }	
+	 void eat(){
+		 System.out.println("This animal eats plants");
+	 }
+}
+
+
+public class InterfaceInheritance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Cat c  = new Cat();
+		Fish f  = new Fish();
+		Spider s  = new Spider();
+		c.eat();
+		f.eat();
+		s.eat();
+	}
+
+}
